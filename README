@@ -4,3 +4,14 @@
 
 P_FSM is the integration repository for FSM utility.
  
+# Subtrees
+#----------
+git@github.com:quicky2000/FSM_examples.git
+git@github.com:quicky2000/FSM_TextUi.git
+git@github.com:quicky2000/FSM_base.git
+git@github.com:quicky2000/FSM_framework.git
+git@github.com:quicky2000/FSM_interfaces.git
+git@github.com:quicky2000/quicky_exception.git
+git@github.com:quicky2000/quicky_tools.git
+#EOF
+

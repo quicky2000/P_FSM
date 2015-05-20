@@ -1,0 +1,4 @@
+depend:FSM_framework
+CFLAGS:-g -Wall -O0
+LDFLAGS:
+
