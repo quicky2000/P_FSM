@@ -27,7 +27,7 @@ namespace FSM_base
 {
   template <class T_SITUATION,class T_TRANSITION> class FSM: public FSM_interfaces::FSM_if
   {
-  private:
+  protected:
     typedef FSM_interfaces::FSM_situation_if FSM_situation_if;
     typedef FSM_interfaces::FSM_types::transition_index_t transition_index_t;
     typedef FSM_interfaces::FSM_weighted_transition_index_if FSM_weighted_transition_index_if;
@@ -42,6 +42,8 @@ namespace FSM_base
     FSM_situation_if & get_current_situation(void)const;
     void set_current_situation(FSM_situation_if & p_situation);
     void select_transition(const transition_index_t & p_transition_index);
+    void apply_transition(const transition_index_t & p_transition_index);
+    void revert(void);
     void compute_transitions(void);
     virtual void configure(void)=0;
     //TO DELETE   virtual const std::string & get_class_name(void)const=0;
