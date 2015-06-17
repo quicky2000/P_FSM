@@ -32,6 +32,19 @@ namespace FSM_examples
       l_result.add(p_transition.get_char());
       return l_result;
     }
+  //----------------------------------------------------------------------------
+  void tree_motor::apply(tree_situation & p_situation,
+                         const tree_transition & p_transition)
+  {
+    p_situation.add(p_transition.get_char());
+  }
+
+  //----------------------------------------------------------------------------
+  void tree_motor::revert_transition(tree_situation &  p_situation)
+  {
+    p_situation.remove_last();
+  }
+
   const std::string tree_motor::m_class_name = "tree_motor";
 }
 //EOF

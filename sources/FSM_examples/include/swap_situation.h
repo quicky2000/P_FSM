@@ -30,6 +30,7 @@ namespace FSM_examples
     swap_situation(void);
     swap_situation(const std::string & p_content);
     ~swap_situation(void);
+    void set_content(const std::string & p_content);
     // Methods inherited from FSM_situation
     const std::string to_string(void)const;
     const std::string get_string_id(void)const;

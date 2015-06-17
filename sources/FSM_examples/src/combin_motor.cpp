@@ -16,6 +16,7 @@
       along with this program.  If not, see <http://www.gnu.org/licenses/>
 */
 #include "combin_motor.h"
+#include "quicky_exception.h"
 
 namespace FSM_examples
 {
@@ -32,6 +33,20 @@ namespace FSM_examples
     l_result.set(p_transition.get_index(),p_transition.get_char());
     return l_result;
   }
+
+  //----------------------------------------------------------------------------
+  void combin_motor::apply(combin_situation & p_situation,
+                           const combin_transition & p_transition)
+  {
+    p_situation.set(p_transition.get_index(),p_transition.get_char());
+  }
+
+  //----------------------------------------------------------------------------
+  void combin_motor::revert_transition(combin_situation & p_situation)
+  {
+    throw quicky_exception::quicky_logic_exception(std::string(__func__) + " not implemented",__LINE__,__FILE__);
+  }
+
   const std::string combin_motor::m_class_name = "combin_motor";
 }
 //EOF

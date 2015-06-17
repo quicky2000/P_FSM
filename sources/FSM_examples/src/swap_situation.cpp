@@ -33,6 +33,12 @@ namespace FSM_examples
   }
 
   //----------------------------------------------------------------------------
+  void swap_situation::set_content(const std::string & p_content)
+  {
+    m_content = p_content;
+  }
+
+  //----------------------------------------------------------------------------
   swap_situation::~swap_situation(void)
   {
   }

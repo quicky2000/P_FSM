@@ -80,5 +80,11 @@ namespace FSM_examples
   {
     m_content += p_char;
   }
+
+  //----------------------------------------------------------------------------
+  void tree_situation::remove_last(void)
+  {
+    m_content = m_content.substr(0,m_content.size() - 1);
+  }
 }
 //EOF

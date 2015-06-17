@@ -40,6 +40,7 @@ namespace FSM_examples
 
     // Dedicated method
     void add(const char & p_char);
+    void remove_last(void);
   private:
     std::string m_content;
   };
